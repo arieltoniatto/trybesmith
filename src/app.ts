@@ -2,6 +2,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import productRoutes from './routes/productsRoutes';
 import statusCodes from './statusCodes';
 import userRoutes from './routes/usersRoutes';
+import orderRoutes from './routes/ordersRoutes';
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.get('/', (req: Request, res: Response) => {
 
 app.use(productRoutes);
 app.use(userRoutes);
+app.use(orderRoutes);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   const { name, message } = err;
