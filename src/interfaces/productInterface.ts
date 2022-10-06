@@ -1,7 +1,7 @@
-interface Product {
+interface IProduct {
   id?: number,
   name: string,
   amount: string,
 }
 
-export default Product;
+export default IProduct;
