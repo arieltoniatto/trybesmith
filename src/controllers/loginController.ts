@@ -14,7 +14,7 @@ class LoginController {
       return res.status(statusCodes.BAD_REQUEST).json({ message: '"password" is required' });
     }
 
-    const token: string = await this.loginService.findOne(req.body);
+    const token = await this.loginService.findOne(req.body);
 
     if (token === 'err') {
       return res.status(statusCodes.UNAUTHORIZED).json({ message: 'Username or password invalid' });
