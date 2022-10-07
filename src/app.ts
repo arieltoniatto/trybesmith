@@ -16,7 +16,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.use('/products', productRoutes);
-app.use(userRoutes);
+app.use('/users', userRoutes);
 app.use(orderRoutes);
 app.use(loginRoutes);
 
