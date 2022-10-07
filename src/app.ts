@@ -15,7 +15,7 @@ app.get('/', (req: Request, res: Response) => {
   res.status(statusCodes.OK).send('Express + TypeScript');
 });
 
-app.use(productRoutes);
+app.use('/products', productRoutes);
 app.use(userRoutes);
 app.use(orderRoutes);
 app.use(loginRoutes);

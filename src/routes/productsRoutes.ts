@@ -6,7 +6,7 @@ const router = Router();
 
 const productController = new ProcutController();
 
-router.get('/products', validateName, validateAmount, productController.getAll);
-router.post('/products', productController.create);
+router.get('/', productController.getAll);
+router.post('/', validateName, validateAmount, productController.create);
 
 export default router;
