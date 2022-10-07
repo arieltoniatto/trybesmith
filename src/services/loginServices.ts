@@ -12,7 +12,6 @@ class LoginService {
 
   public async findOne(login: ILogin): Promise<string> {
     const user = await this.model.findOne(login);
-    console.log('THIS', user);
     if (!user) return 'err';
 
     return jwt.sign({ id: user.id, username: user.username }, 'secret');
